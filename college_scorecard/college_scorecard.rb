@@ -9,15 +9,9 @@ class CollegeScoreboard
   end
 
   def start(fn_name, arg)
-          # ^function name, argument for that function
-
-    case fn_name # depending on the value of the fn_name variable, do different things...
-
-    when "by_state" then by_state(arg) # "when fn_name is 'by_state', call the by_state method and pass in the arg variable"
-
-    # when "top_average_faculty_salary" then top_average_faculty_salary(arg)
-    # etc...
-    end
+    #       ^function name, argument for that function
+    send(fn_name.to_sym, arg) # probably don't use this....   :-O  !!!!
+    #     ^call the function name passed in, and pass it the argument
   end
 
   def by_state(state)
