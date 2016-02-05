@@ -21,7 +21,6 @@ class CollegeScoreboard
   def top_average_faculty_salary(num)
     @data.select { |college_data| college_data[:avgfacsal] != "NULL" }
     .sort_by { |college_data| college_data[:avgfacsal] }
-    require 'pry'; binding.pry
     .map { |college_data| college_data[:instnm] }
     .first(num.to_i)
   end
